@@ -1,0 +1,147 @@
+.flex-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 3rem;
+}
+
+h1{
+    font-size: 6rem;
+    margin: 0;
+}
+
+.crypto-heading{
+    color: var(--white);
+}
+
+.crypto-heading:hover{
+    color: var(--black);
+    -webkit-text-stroke-color: var(--white);
+    -webkit-text-stroke-width: 3px;
+    transition: all 0.3s;
+}
+
+.real-time-heading{
+    color: var(--blue);
+}
+
+.info-text{
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+.btn-flex{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.right{
+    width: 40%;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.iphone{
+    position: absolute;
+    z-index: 90;
+    min-width: 350px;
+    width: 50%;
+    right: 50px;
+}
+
+.gradient{
+    position: absolute;
+    min-width: 300px;
+    width: 40%;
+    top: 8rem;
+    right: 50px;
+}
+
+
+@media only screen and (max-width:1250px){
+    h1{
+        font-size: 5.5rem;
+    }
+
+    .iphone{
+        right: 0;
+    }
+
+    .gradient{
+        right: 0;
+    }
+}
+
+@media only screen and (max-width:1100px){
+    h1{
+        font-size: 5rem;
+    }
+
+    .iphone{
+        min-width: 250px;
+    }
+    .gradient{
+        min-width: 200px;
+        top: 5rem;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .flex-info{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .right{
+      display: block;
+       width: 100%;
+      
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .btn-flex{
+        justify-content: center;
+    }
+
+    .left{
+        text-align: center;
+        width: 100%;
+    }
+
+    .iphone{
+        right: 70px;
+    }
+
+    .gradient{
+        right: 50px;
+    }
+}
+
+
+@media only screen and (max-width:450px){
+
+    .right{
+        display: flex;
+        gap: -20px;
+        justify-content: center;
+    }
+
+   .iphone{
+    position: absolute;
+    
+    min-width: 200px;
+    /* left: 30px; */
+   }
+   .gradient{
+    position: absolute;
+ 
+    min-width: 150px;
+   }
+
+}

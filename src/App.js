@@ -1,11 +1,19 @@
 import './App.css';
-import Header from './components/Common/Header';
+import {BrowserRouter,Route, Routes} from "react-router-dom"
+import Home from './pages/Home';
+import DashBoard from './pages/DashBoard';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />}/>
+            <Route path='/dashboard' element={<DashBoard />}/>
+          </Routes>
+      
+      </BrowserRouter>
     </div>
   );
 }

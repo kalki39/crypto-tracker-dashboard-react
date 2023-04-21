@@ -37,7 +37,7 @@ function Grid({ coin }) {
                         </div>
                     </div>
                 )
-            }
+            } 
 
             <div className="info-container">
                 <h3 className="price" style={{

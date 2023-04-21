@@ -8,6 +8,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import { createTheme, ThemeProvider } from '@mui/system';
 import red from '@mui/material/colors/red';
 import Grid from '../Grid';
+import List from '../List';
 // import { createMuiTheme, ThemeOptions } from '@material-ui/core/styles';
 
 export default function TabsComponent({coins}) {
@@ -41,8 +42,8 @@ export default function TabsComponent({coins}) {
       <TabContext value={value}>
         <div>
           <TabList onChange={handleChange} variant="fullWidth" aria-label="lab API tabs example">
-            <Tab label="grid" value="grid" sx={style} />
-            <Tab label="list" value="list" sx={style}/>
+            <Tab label="grid" value="grid" sx={style} className="ff"/>
+            <Tab label="list" value="list" sx={style} className="ff"/>
           </TabList>
         </div>
         <TabPanel value="grid">
@@ -54,7 +55,15 @@ export default function TabsComponent({coins}) {
           }
           </div>
         </TabPanel>
-        <TabPanel value="list">Item Two</TabPanel>
+        <TabPanel value="list">
+          <table>
+            {
+              coins.map((coin,i)=>(
+                  <List coin={coin}/>
+              ))
+            }
+          </table>
+        </TabPanel>
       </TabContext>
     </ThemeProvider>
   );

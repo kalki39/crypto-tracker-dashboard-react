@@ -1,0 +1,29 @@
+.search-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin: 1rem auto;
+    padding:  0.5rem 1.25rem;
+    background-color: var(--darkgrey);
+    position: relative;
+    border-radius: 3rem;
+}
+
+.ip-bar{
+    width: 80%;
+    align-self: flex-end;
+    height: 40px;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    color: var(--grey);
+    font-size: 1.2rem;
+    font-family: "Inter";
+}
+
+.search-icon{
+    color: var(--grey);
+
+}

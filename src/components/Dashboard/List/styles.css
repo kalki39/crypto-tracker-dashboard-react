@@ -102,9 +102,13 @@
     .list-row td {
         font-size: ;
     }
+
+    .list-row{
+        margin: 0.5rem;
+    }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 860px) {
     .volume {
         display: none;
     }
@@ -130,6 +134,17 @@
     }
 }
 
+@media only screen and (max-width:660px) {
+    .mobile-market-cap{
+        display: block;
+    }
+
+    .bigScreen-market-cap{
+        display: none;
+    }
+
+}
+
 @media only screen and (max-width: 450px) {
 
     .list-row td p,
@@ -153,11 +168,8 @@
         padding: 0.5rem !important;
     }
 
-    .mobile-market-cap{
-        display: block;
-    }
-
-    .bigScreen-market-cap{
-        display: none;
+    
+    .td-right-align {
+        text-align: center;
     }
 }

@@ -13,6 +13,10 @@
   --voilet: #da14fe;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -54,7 +58,16 @@ img{
   -o-user-drag: none; 
 }
 
-@media only screen and (max-width: 600px) {
+.grey-wrapper{
+  display: block;
+  width: 90%;
+  background-color: var(--darkgrey);
+  margin: 1.5rem auto;
+  border-radius: 0.8rem;
+  padding: 1rem 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
   
   .css-13xfq8m-MuiTabPanel-root{
       padding: 0.5rem !important;

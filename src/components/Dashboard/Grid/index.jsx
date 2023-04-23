@@ -2,10 +2,12 @@ import React from 'react'
 import "./styles.css";
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
+import { Link } from 'react-router-dom';
 
 
 function Grid({ coin }) {
     return (
+    <Link to={`/coin/${coin.id}`}>  
         <div className={`card ${
             coin.price_change_percentage_24h < 0 && "card-red"
         }`}>
@@ -52,6 +54,7 @@ function Grid({ coin }) {
 
 
         </div>
+        </Link>     
     )
 }
 

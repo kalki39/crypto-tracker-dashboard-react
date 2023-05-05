@@ -31,7 +31,7 @@ function WatchList() {
             {
                 isLoading ?
                     <Loader /> :
-                    arr && arr.length > 0 ? <TabsComponent coins={watchCoin} /> : <h1 className='nocoin'>NO COINS IN WACTHLIST</h1>
+                    arr && arr.length > 0 ? <TabsComponent coins={watchCoin} /> : <h1 className='nocoin'>NO COINS IN WATCHLIST</h1>
                     
             }
         </div>

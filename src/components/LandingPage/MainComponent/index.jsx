@@ -56,7 +56,7 @@ function MainComponent() {
                     animate={{ y: 10 }}
                     transition={{
                         type: "smooth",
-                        repeatType: "reverse",
+                        repeatType: "mirror",
                         duration: 2,
                         repeat: "Infinity",
                     }}

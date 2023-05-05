@@ -6,7 +6,6 @@ import TabsComponent from '../components/Dashboard/Tab';
 import { get100Coins } from '../functions/get100Coins'
 
 function WatchList() {
-    const [allCoin, setAllCoin] = useState([]);
     const [watchCoin, setWatchCoin] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -16,7 +15,6 @@ function WatchList() {
         getData();
     }, [])
 
-    let watch = [];
 
     async function getData() {
         setIsLoading(true);

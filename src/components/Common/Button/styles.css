@@ -12,7 +12,8 @@
 }
 
 .btn:hover{
-    box-shadow: 5px 5px 10px var(--blue);
+    /* box-shadow: 5px 5px  var(--blue); */
+    background-color: var(--black);
     transition: all 0.3s;
 }
 

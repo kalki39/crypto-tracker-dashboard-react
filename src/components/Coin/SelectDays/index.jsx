@@ -4,12 +4,24 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 
 export default function SelectDays({ days, handleDaysChange, noPTag }) {
+  const [flag, setFlag] = useState(window.innerWidth);
+
+    
+
+    window.addEventListener('resize', ()=>{
+        if (window.innerWidth<550) {
+          setFlag(window.innerWidth)
+        }else{
+          setFlag(window.innerWidth)
+        }
+      });
   return (
     <div className="select-days">
       {!noPTag && <p>Price Change In</p>}
       <Select
         sx={{
           height: "2.5rem",
+          fontSize: flag < 550 ? "10px": "16px",
           color: "var(--white)",
           "& .MuiOutlinedInput-notchedOutline": {
             borderColor: "var(--white)",

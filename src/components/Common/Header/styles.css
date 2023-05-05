@@ -10,7 +10,7 @@
     padding: 1.5rem 3rem;
     background-color: var(--black);
     z-index: 100;
-    border-bottom: 1px solid seagreen;
+    /* border-bottom: 1px solid seagreen; */
 }
 
 .logo{
@@ -38,6 +38,13 @@ span{
 .link:hover{
     color: var(--white);
     transition: all 0.4s;
+}
+
+.theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
 }
 
 a{

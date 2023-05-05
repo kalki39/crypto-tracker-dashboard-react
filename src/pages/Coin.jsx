@@ -13,6 +13,7 @@ import LineChart from '../components/Coin/LineChart';
 import { convertDate } from '../functions/convertDate';
 import SelectDays from '../components/Coin/SelectDays';
 import { settingChartData } from '../functions/settingChartData';
+import TogglePriceType from '../components/Coin/PriceType';
 
 function CoinPage() {
     const { id } = useParams();
@@ -33,10 +34,10 @@ function CoinPage() {
     
     if(data){
       coinObject(setCoinData, data); 
-      const price= await getCoinPrices(id,days); 
+      const price= await getCoinPrices(id,days,priceType); 
       if (price.length >0) {
         console.log("whooo>>", price);
-        settingChartData(setChartData, price);        // setting initialy chart for days 60
+        settingChartData(setChartData, price);        // setting initialy chart for days 60 and pricetype as price
       }
       setIsLoading(false);
     }
@@ -47,14 +48,26 @@ function CoinPage() {
     console.log("kalki");
     setDays(event.target.value)
     setIsLoading(true);
-    const price= await getCoinPrices(id,event.target.value);  //instead of days we use e.target.value
+    const price= await getCoinPrices(id,event.target.value,priceType);  //instead of days we use e.target.value
+      if (price.length >0) {
+        console.log("whooo>>", price);
+        settingChartData(setChartData, price);       
+        setIsLoading(false);
+      }   
+  }
+
+  const handlePriceTypeChange = async (event,newType) =>{
+    console.log(newType);
+    if(newType){
+      setIsLoading(true);
+    setPriceType(newType);
+    const price= await getCoinPrices(id,days,newType);  //instead of priceType we use e.target.value
       if (price.length >0) {
         console.log("whooo>>", price);
         settingChartData(setChartData, price);       
         setIsLoading(false);
       }
-      
-      
+    }
   }
 
     return (
@@ -69,7 +82,8 @@ function CoinPage() {
                     </div>
                     <div className="grey-wrapper" style={{ padding: "0.5rem 0.5rem" }}>
                       <SelectDays days={days} handleDaysChange={handleDaysChange}/>
-                      <LineChart chartData={chartData}/>
+                      <TogglePriceType priceType={priceType} handlePriceTypeChange={handlePriceTypeChange}/>
+                      <LineChart chartData={chartData} priceType={priceType}/>
                     </div>
                     <CoinInfo heading={coinData.name} desc={coinData.desc}/>
                 </>

@@ -105,6 +105,8 @@
     margin: 1.5rem;
 }
 
+
+
 .price{
     color: var(--green);
 }
@@ -115,3 +117,37 @@
     font-weight: 500;
     font-size: 1rem
 }
+
+.watchlist-icon{
+    /* display: flex; */
+    /* border: 1px solid green; */
+    /* overflow: hidden; */
+    /* justify-self: right; */
+    /* align-items: center; */
+    margin-left: auto;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-self: right;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    color: var(--green);
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+}
+
+.watchlist-icon-red{
+    margin-left: auto;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-self: right;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    color: var(--red);
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+}
+

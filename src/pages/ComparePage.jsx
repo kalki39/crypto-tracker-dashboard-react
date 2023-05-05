@@ -56,7 +56,7 @@ function ComparePage() {
     }
 
     const handlePriceTypeChange = async (event, newType) => {
-        setIsLoading(true);
+        // setIsLoading(true);
         setPriceType(newType);
         const prices1 = await getCoinPrices(crypto1, days, newType);
         const prices2 = await getCoinPrices(crypto2, days, newType);

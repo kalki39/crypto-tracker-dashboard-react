@@ -19,7 +19,7 @@ export const removeCoinFromWatchList = (event,id,setIsCoinAdded) =>{
         }
     }
     else{
-        toast.success(id.charAt(0).toUpperCase() + id.slice(1)+" is could not removed")
+        toast.error(id.charAt(0).toUpperCase() + id.slice(1)+" is could not removed")
         // alert("Coin is could not removed")
     }
 
